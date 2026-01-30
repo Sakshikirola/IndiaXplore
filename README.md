@@ -98,6 +98,8 @@ This project is built to demonstrate:
 
 Backend and authentication are intentionally not included to keep the focus on **frontend architecture and design**.
 
+Live Demo -- https://india-xplore.vercel.app/?section=home 
+
 --- 
 
 ## 👩‍💻 Author

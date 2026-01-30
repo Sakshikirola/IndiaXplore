@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import IndiaFlag from '../assets/flag.png'
 import { FaBars, FaTimes, FaShoppingBag } from 'react-icons/fa' 
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom" 
 
 const Navbar = () => { 
   const [menu, setMenu] = useState(false) 
