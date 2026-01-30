@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import IndiaFlag from '../assets/flag.png'
 import { FaBars, FaTimes, FaShoppingBag } from 'react-icons/fa' 
 import { useNavigate } from "react-router-dom"
-import DestinationCard from './DestinationCard'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 
-const Navbar = () => {
+const Navbar = () => { 
   const [menu, setMenu] = useState(false) 
   const navigate = useNavigate()
 
@@ -47,24 +45,45 @@ const Navbar = () => {
       </div>
 
       {menu && ( 
-        <div className="md:hidden flex flex-col gap-3 bg-black/90 px-6 py-4"> 
-          <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            HOME
-          </button>
-          <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            ABOUT
-          </button>
-          <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            DESTINATIONS
-          </button>
-          <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            PLAN TRIP
-          </button>
-          <button onClick={() => { navigate("/wishlist"); setMenu(false)  }} className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            <FaShoppingBag/>
-          </button> 
-        </div>
-      )}
+     <div className="md:hidden flex flex-col gap-3 bg-black/90 px-6 py-4"> 
+    
+      <button
+      onClick={() => { navigate("/?section=home"); setMenu(false) }}
+      className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors"
+      >
+        HOME
+      </button>
+
+     <button
+      onClick={() => { navigate("/about"); setMenu(false) }}
+      className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors"
+     >
+      ABOUT
+     </button>
+
+     <button
+      onClick={() => { navigate("/?section=destinations"); setMenu(false) }}
+      className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors"
+     >
+      DESTINATIONS
+     </button>
+
+     <button
+      onClick={() => { navigate("/?section=plantrip"); setMenu(false) }}
+      className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors"
+     >
+      PLAN TRIP
+     </button>
+
+     <button
+      onClick={() => { navigate("/wishlist"); setMenu(false) }}
+      className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors"
+     >
+      <FaShoppingBag />
+     </button> 
+   </div>
+)}
+
     </nav>
   )
 }

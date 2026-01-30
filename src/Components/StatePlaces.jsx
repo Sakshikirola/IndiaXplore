@@ -10,7 +10,7 @@ const StatePlaces = () => {
   const state = states.find(s => s.slug === stateSlug)
   
   const [wishlist, setWishlist] = useState([]) 
-  useEffect(()=>{
+  useEffect(()=>{ 
     setWishlist(JSON.parse(localStorage.getItem("wishlist")) || []) 
   },[]) 
 
@@ -74,7 +74,7 @@ const StatePlaces = () => {
                  ${isInWishlist(place) ? "bg-gray-600 cursor-not-allowed"
                  : "bg-linear-to-r from-amber-600 to-rose-600 hover:scale-105"}`}>
                   {isInWishlist(place) ? "✔ Added to Wishlist" : "❤️ Add to Wishlist"}  
-                </button>  
+                </button>   
               </div> 
             </div>
           </div> 
