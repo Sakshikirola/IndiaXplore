@@ -3,7 +3,7 @@ import { states } from '../assets/assets'
 
 const PlanTrip = () => {
 
-  const [selectState,setSelectState] = useState(null)
+  const [selectState,setSelectState] = useState(null) 
   const [selectPlace,setSelectPlace] = useState('')
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
@@ -39,7 +39,7 @@ const PlanTrip = () => {
     </div>
 
     <div className="bg-linear-to-r from-blue-900 via-indigo-800 to-blue-600 shadow-xl shadow-blue-900/30 p-5 sm:p-8 lg:p-10
- h-full flex items-center">
+ h-full flex items-center"> 
       <form className='w-full flex flex-col justify-between'> 
             <div className='grid grid-cols-2 gap-4'> 
               <div>

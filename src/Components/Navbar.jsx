@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import IndiaFlag from '../assets/flag.png'
-import { FaBars, FaTimes } from 'react-icons/fa' 
+import { FaBars, FaTimes, FaShoppingBag } from 'react-icons/fa' 
 import { useNavigate } from "react-router-dom"
 import DestinationCard from './DestinationCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false) 
@@ -21,6 +22,10 @@ const Navbar = () => {
             HOME
           </button>
 
+          <button onClick={() => navigate("/about")} className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
+            ABOUT 
+          </button>
+
           <button onClick={() => navigate("/?section=destinations")} className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
             DESTINATIONS
           </button>
@@ -30,7 +35,7 @@ const Navbar = () => {
           </button>
 
           <button onClick={() => navigate("/wishlist")} className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            WISHLIST
+            <FaShoppingBag/>
           </button>
         </div>
 
@@ -41,10 +46,13 @@ const Navbar = () => {
         </div> 
       </div>
 
-      {menu && (
+      {menu && ( 
         <div className="md:hidden flex flex-col gap-3 bg-black/90 px-6 py-4"> 
           <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
             HOME
+          </button>
+          <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
+            ABOUT
           </button>
           <button className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
             DESTINATIONS
@@ -53,7 +61,7 @@ const Navbar = () => {
             PLAN TRIP
           </button>
           <button onClick={() => { navigate("/wishlist"); setMenu(false)  }} className="px-3 py-1 rounded font-semibold text-white hover:text-blue-500 transition-colors">
-            WISHLIST
+            <FaShoppingBag/>
           </button> 
         </div>
       )}
