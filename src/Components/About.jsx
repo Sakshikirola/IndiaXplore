@@ -11,7 +11,7 @@ const About = () => {
           <h3 className="text-white text-4xl md:text-6xl font-bold">About Us</h3> 
         </div> 
       </div>
-
+ 
       <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-20 mb-12 px-4 sm:px-6 md:px-12">  
         <div>
           <h2 className='text-blue-700'>OUR INTRODUCTION</h2>
